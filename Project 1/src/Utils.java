@@ -48,12 +48,12 @@ import java.util.StringTokenizer;
  *
  * @author Benson Yee
  * @since 2021-01-21
- * @version 1.2.0
+ * @version 1.2.1
  */
 
 public class Utils {
 
-    public static String VERSION = "1.2.0";
+    public static String VERSION = "1.2.1";
 
     // TODO: static bool fileExists (String filename)
 
@@ -1036,39 +1036,5 @@ public class Utils {
         } while (!validInput);
 
         return line.equalsIgnoreCase("y");
-    }
-
-
-
-
-    /**
-     * Takes a String and breaks it into tokens. Each word or
-     * number separated by spaces is given its own element in
-     * the inputted array.
-     *
-     * Example: "this is a string"
-     *
-     * Index     Value
-     * 0         this
-     * 1         is
-     * 2         a
-     * 3         string
-     *
-     * @param line    the String to tokenize
-     * @param arr     the array to save the tokens in
-     * @param arrSize the array's size
-     * @return the number of tokens read
-     */
-    public static int stringTokenize (String line, String[] arr, int arrSize) {
-
-        StringTokenizer st = new StringTokenizer(line);
-        initArray(arr, arrSize);
-        int index = 0;
-
-        while (st.hasMoreTokens() && index != arrSize) {
-            arr[index++] = st.nextToken();
-        }
-
-        return index;
     }
 }

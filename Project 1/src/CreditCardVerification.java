@@ -11,6 +11,15 @@ public class CreditCardVerification {
         card = CreditCard.promptCreditCard();
         card.printFullInfo();
 
+        Utils.printVar("cardNumber", card.getCardNumber());
+        Utils.printVar("getCardNumberNum()", card.getCardNumberNum());
+        System.out.println();
+
+        Utils.printVar("cardExpirationMonth", card.getCardExpirationMonth());
+        Utils.printVar("cardExpirationYear", card.getCardExpirationYear());
+        Utils.printVar("getCardExpirationDate()", card.getCardExpirationDate());
+        System.out.println();
+
         Utils.printCredits("Benson Yee");
     }
 }
