@@ -1,0 +1,94 @@
+C:\Users\benso\.jdks\openjdk-14.0.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.1.1\lib\idea_rt.jar=51248:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.1.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\benso\Documents\IntelliJIDEA\CIS 255\Project 1\out\production\Project 1;C:\Users\benso\AppData\Roaming\JetBrains\IdeaIC2020.3\plugins\Kotlin\kotlinc\lib\kotlin-stdlib.jar;C:\Users\benso\AppData\Roaming\JetBrains\IdeaIC2020.3\plugins\Kotlin\kotlinc\lib\kotlin-reflect.jar;C:\Users\benso\AppData\Roaming\JetBrains\IdeaIC2020.3\plugins\Kotlin\kotlinc\lib\kotlin-test.jar" CreditCardVerification
+
+Credit Card Verification
+Programmed by Benson Yee
+Start Time: 23-Jan-2021 05:44:46
+
+Please type in your 16-digit credit card number. You can enter it with or without spaces (ex. 5500 0000 0000 0004 or 5500000000000004).
+
+
+Input not recognized as valid credit card number. Please try again.
+hello
+
+Input not recognized as valid credit card number. Please try again.
+0 00 000 00
+
+Input not recognized as valid credit card number. Please try again.
+0000 0000 00
+
+Input not recognized as valid credit card number. Please try again.
+0000 0000 0000 0000 0000
+
+Input not recognized as valid credit card number. Please try again.
+00000000
+
+Input not recognized as valid credit card number. Please try again.
+0000000000000000000000000
+
+Input not recognized as valid credit card number. Please try again.
+0000 0000 0000 0000
+
+Starting digit of credit card number is invalid. Please try again.
+4000 0000 0000 0000
+
+Your credit card number is invalid (failed CheckSum). Please try again.
+4111 1111 1111 1111
+
+Your valid credit card number is:
+4111 1111 1111 1111
+
+Please type in your expiration date (ex. 1/23, 01/23, 1/2023, or 01/2023), or BACK to input a new credit card.
+back
+
+Please type in your 16-digit credit card number. You can enter it with or without spaces (ex. 5500 0000 0000 0004 or 5500000000000004).
+4012888888881881
+
+Your valid credit card number is:
+4012 8888 8888 1881
+
+Please type in your expiration date (ex. 1/23, 01/23, 1/2023, or 01/2023), or BACK to input a new credit card.
+back
+
+Please type in your 16-digit credit card number. You can enter it with or without spaces (ex. 5500 0000 0000 0004 or 5500000000000004).
+6610591081018250
+
+Your credit card number is invalid (failed CheckSum). Please try again.
+5019717010103742
+
+Your valid credit card number is:
+5019 7170 1010 3742
+
+Please type in your expiration date (ex. 1/23, 01/23, 1/2023, or 01/2023), or BACK to input a new credit card.
+1/20
+
+Your credit card is expired. Please check the date or type BACK to input a new credit card.
+01/20
+
+Your credit card is expired. Please check the date or type BACK to input a new credit card.
+01/2020
+
+Your credit card is expired. Please check the date or type BACK to input a new credit card.
+1/2020
+
+Your credit card is expired. Please check the date or type BACK to input a new credit card.
+1/21
+WARNING! Your credit card will expire this month. Purchases with this card after 01/2021 will be invalid.
+
+Your valid credit card expiration date is:
+01/2021
+
+Card Number: 5019 7170 1010 3742
+Expiration Date: 01/2021
+
+cardNumber: 5019 7170 1010 3742
+getCardNumberNum(): 5.019717010103742E15
+
+cardExpirationMonth: 1
+cardExpirationYear: 2021
+getCardExpirationDate(): 01/2021
+
+End Time: 23-Jan-2021 05:46:39
+Programmed by Benson Yee
+Powered by Utils 1.2.1
+
+Process finished with exit code 0
