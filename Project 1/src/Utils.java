@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 import java.util.Scanner;
-import java.util.StringTokenizer;
 
 /**
  * The Utils class contains a number of useful functions
@@ -16,7 +15,8 @@ import java.util.StringTokenizer;
  * useful debugging tool. To use this class, type "Utils." followed
  * by the function name.
  *
- * Example: Utils.promptNum();
+ * Example:
+ * Utils.promptNum();
  *
  * Here is the full list of functions:
  *  - fileRead
@@ -40,7 +40,6 @@ import java.util.StringTokenizer;
  *  - promptNumRange
  *  - promptStr
  *  - promptYN
- *  - stringTokenize
  *
  * This work is licensed under the Creative Commons Attribution 4.0
  * International License. To view a copy of this license, visit
@@ -48,12 +47,12 @@ import java.util.StringTokenizer;
  *
  * @author Benson Yee
  * @since 2021-01-21
- * @version 1.2.1
+ * @version 1.2.2
  */
 
 public class Utils {
 
-    public static String VERSION = "1.2.1";
+    public static String VERSION = "1.2.2";
 
     // TODO: static bool fileExists (String filename)
 
@@ -144,7 +143,8 @@ public class Utils {
      * Returns the date and time and returns it as a String. Format
      * is dd-MM-yyy HH:mm:ss, with HH in 24-hour time.
      *
-     * Example: 25-Nov-2020 10:09:32
+     * Example:
+     * 25-Nov-2020 10:09:32
      *
      * @return the date / time as a String
      */
@@ -163,7 +163,8 @@ public class Utils {
      * is Utils MAJOR.MINOR.PATCH, following Sematic
      * Versioning (https://semver.org/).
      *
-     * Example: Utils 1.2.0
+     * Example:
+     * Utils 1.2.0
      *
      * @return the version of Utils as a String
      */
@@ -393,7 +394,7 @@ public class Utils {
      * Pauses the console. Prints message to console.
      * Waits for user to press Enter.
      *
-     * @param message the message to print
+     * @param message the message to prompt the user
      */
     public static void pause (String message) {
         promptStr(message);
@@ -651,7 +652,7 @@ public class Utils {
      */
     public static void printTitle (String programName, String authorName) {
 
-        System.out.printf("%s\n", programName);
+        System.out.printf("\n%s\n", programName);
         System.out.printf("Programmed by %s\n", authorName);
         System.out.printf("Start Time: %s\n\n", getDateTime());
     }
@@ -744,7 +745,7 @@ public class Utils {
      * Prompts the user to input a double with a message.
      * Rejects any non-numeric values.
      *
-     * @param message the message to print
+     * @param message the message to prompt the user
      * @return the double
      */
     public static double promptNum (String message) {
@@ -786,7 +787,7 @@ public class Utils {
      * minimum possible input.
      *
      * @param min     the minimum possible input
-     * @param message the message to print
+     * @param message the message to prompt the user
      * @return the double
      */
     public static double promptNumMin (double min, String message) {
@@ -829,7 +830,7 @@ public class Utils {
      * maximum possible input.
      *
      * @param max     the minimum possible input
-     * @param message the message to print
+     * @param message the message to prompt the user
      * @return the double
      */
     public static double promptNumMax (double max, String message) {
@@ -870,7 +871,7 @@ public class Utils {
      * Rejects any non-numeric values or non-positive
      * numbers.
      *
-     * @param message the message to print
+     * @param message the message to prompt the user
      * @return the double
      */
     public static double promptNumPos (String message) {
@@ -911,7 +912,7 @@ public class Utils {
      * Rejects any non-numeric values or non-negative
      * numbers.
      *
-     * @param message the message to print
+     * @param message the message to prompt the user
      * @return the double
      */
     public static double promptNumNeg (String message) {
@@ -954,7 +955,7 @@ public class Utils {
      *
      * @param min     the min, inclusive
      * @param max     the max, inclusive
-     * @param message the message to print
+     * @param message the message to prompt the user
      * @return the int
      */
     public static double promptNumRange (double min, double max, String message) {
@@ -1017,7 +1018,7 @@ public class Utils {
      * Prompts the user to input Y or N with a message.
      * Ignores case. Returns true if Y or false if N.
      *
-     * @param message the message to print
+     * @param message the message to prompt the user
      * @return true if Y, false otherwise
      */
     public static boolean promptYN (String message) {
