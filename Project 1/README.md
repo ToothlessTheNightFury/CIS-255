@@ -1,6 +1,6 @@
-# Known Typos
+# Known Errors and Typos
 
-This is a list of known typos with the uploaded project. The typos are not corrected as the project has already been submitted. 
+This is a list of known errors and typos with the uploaded project. The typos are not corrected as the project has already been submitted. 
 However, those who wish to learn or use the code in this project should be aware of these and correct them before use.
 
 ## CreditCard.java
