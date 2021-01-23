@@ -1,7 +1,7 @@
 # Known Errors and Typos
 
 This is a list of known errors and typos with the uploaded project. The typos are not corrected as the project has already been submitted. 
-However, those who wish to learn or use the code in this project should be aware of these and correct them before use.
+Those who wish to learn or use the code in this project should see the Updated version of this project instead.
 
 ## CreditCard.java
 https://github.com/ToothlessTheNightFury/CIS-255/blob/ff1ed638c7a6ac3080ec944f450e2f928fa0d151/Project%201%20(Submission)/CreditCard.java#L389
