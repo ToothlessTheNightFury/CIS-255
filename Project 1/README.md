@@ -77,17 +77,25 @@ Below is a video of my interacting with a working program with extra credit.
 Here is a list of valid numbers that you can use for testing:
 
 4111111111111111
+
 4012888888881881
+
 5019717010103742
+
 5555555555554444
+
 5610591081018250
+
 6011111111111117
+
 6011000990139424
 
 Here are some invalid numbers that are the right length and have the correct starting digit, but fail the sumCheck test:
 
 6610591081018250
+
 5610591081018251
+
 4610591081018250
 
 When testing invalid numbers and values, make sure to test for:
