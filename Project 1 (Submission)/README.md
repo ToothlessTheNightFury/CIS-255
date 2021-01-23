@@ -4,7 +4,7 @@ This is a list of known errors and typos with the uploaded project. The typos ar
 However, those who wish to learn or use the code in this project should be aware of these and correct them before use.
 
 ## CreditCard.java
-https://github.com/ToothlessTheNightFury/CIS-255/blob/d5f2c75b47673f173503fc395b622bba67251fe0/Project%201/CreditCard.java#L389
+https://github.com/ToothlessTheNightFury/CIS-255/blob/ff1ed638c7a6ac3080ec944f450e2f928fa0d151/Project%201%20(Submission)/CreditCard.java#L389
 
 `newDigit = newDigit < 9 ? newDigit : 1 + (newDigit % 10);` should be `newDigit = newDigit <= 9 ? newDigit : 1 + (newDigit % 10);`
 
