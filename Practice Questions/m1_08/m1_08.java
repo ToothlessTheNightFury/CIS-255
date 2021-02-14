@@ -1,4 +1,4 @@
-public class m1_q8 {
+public class m1_08 {
 
     public static void printPizzaPerPerson (int numberOfPizzas, int numberOfPeople) {
 
