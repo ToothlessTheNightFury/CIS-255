@@ -1,4 +1,3 @@
-/*
 import java.util.*;
 
 public class m4_21 {
@@ -52,4 +51,3 @@ public class m4_21 {
         }
     }
 }
- */
