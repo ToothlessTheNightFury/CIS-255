@@ -1,4 +1,3 @@
-/*
 public class m1_q8 {
 
     public static void printPizzaPerPerson (int numberOfPizzas, int numberOfPeople) {
@@ -14,4 +13,3 @@ public class m1_q8 {
         printPizzaPerPerson(4, 2);
     }
 }
-*/
