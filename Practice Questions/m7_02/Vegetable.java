@@ -1,6 +1,6 @@
 public class Vegetable extends Food {
 
-	private final boolean DEFAULT_IS_GREEN = true;
+    private final boolean DEFAULT_IS_GREEN = true;
     private boolean isGreen;
 
     public Vegetable (String name) {
