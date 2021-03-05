@@ -8,7 +8,7 @@ public abstract class Fish extends Animal implements WaterDweller {
     }
 
     public String getDescription() {
-        return String.format("%s\t%s", ANIMAL_DESCRIPTION, DESCRIPTION);
+        return String.format("%s\t%s\t%s", ANIMAL_DESCRIPTION, DESCRIPTION, breathesAirToString());
     }
 
     @Override

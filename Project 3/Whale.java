@@ -9,7 +9,7 @@ public abstract class Whale extends Mammal implements WaterDweller {
     }
 
     public String getDescription() {
-        return String.format("%s\t%s %s", super.getDescription(), DESCRIPTION, breathesAirToString());
+        return String.format("%s\t%s\t%s", super.getDescription(), DESCRIPTION, breathesAirToString());
     }
 
     public boolean breathesAir() {

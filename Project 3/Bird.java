@@ -9,7 +9,7 @@ public abstract class Bird extends Animal implements Winged  {
     }
 
     public String getDescription() {
-        return String.format("%s\t%s", ANIMAL_DESCRIPTION, DESCRIPTION);
+        return String.format("%s\t%s\t%s", ANIMAL_DESCRIPTION, DESCRIPTION, canFlyToString());
     }
 
     @Override

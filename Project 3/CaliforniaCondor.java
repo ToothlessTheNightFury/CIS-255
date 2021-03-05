@@ -8,7 +8,7 @@ public class CaliforniaCondor extends Bird implements Endangered {
     }
 
     public String getDescription() {
-        return String.format("%s\t%s", super.getDescription(), DESCRIPTION);
+        return String.format("%s\t%s\t%s", super.getDescription(), DESCRIPTION, isEndangeredToString());
     }
 
     public boolean canFly() {

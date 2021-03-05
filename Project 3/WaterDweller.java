@@ -3,6 +3,6 @@ interface WaterDweller {
     boolean breathesAir();
 
     default String breathesAirToString() {
-        return String.format("(lives in water, %s)", breathesAir() ? "breathes air" : "does not breathe air");
+        return String.format("Water Dweller (%s)", breathesAir() ? "Air" : "Water");
     }
 }

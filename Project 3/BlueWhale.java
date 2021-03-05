@@ -7,7 +7,7 @@ public class BlueWhale extends Whale implements Endangered {
     }
 
     public String getDescription() {
-        return String.format("%s\t%s", super.getDescription(), DESCRIPTION);
+        return String.format("%s\t%s\t%s", super.getDescription(), DESCRIPTION, isEndangeredToString());
     }
 
     public void displayConservationInformation() {
