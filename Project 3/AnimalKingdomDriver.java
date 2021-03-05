@@ -206,6 +206,16 @@ public class AnimalKingdomDriver {
 				endangered.displayConservationInformation();
 			}
 		}
+
+		// EC: Testing OrcaWhale class
+		animalList.add(new OrcaWhale(14, "Free Willy"));
+		Collections.sort(animalList);
+
+		System.out.println("\n************EC: TEST ORCAWHALE CLASS************");
+		System.out.println("Should print 14 animals including Free Willy, ordered in alphabetic order by name:\n");
+		for(Animal animal : animalList) {
+			System.out.println(animal);
+		}
 	}
 	
 	
