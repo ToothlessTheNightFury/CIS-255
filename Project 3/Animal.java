@@ -62,7 +62,6 @@ public abstract class Animal implements Comparable<Animal> {
 		// Collator used to provide alphabetic sorting for ALL languages
 		// If Unicode values compared, only works for English
 		Collator collator = Collator.getInstance();
-
 		return collator.compare(name, obj.name);
 	}
 
