@@ -15,7 +15,7 @@ public abstract class Vehicle {
 	 * magnitude given (how much the user throttles). Returns the current acceleration 
 	 * of vehicle.
 	*/
-	public abstract int accelerate (int magnitude);
+	public abstract double accelerate (double magnitude);
 }
 
 public abstract class Car extends Vehicle implements Drivable {
@@ -34,7 +34,7 @@ public abstract class Car extends Vehicle implements Drivable {
 	 * vehicle and magnitude given (how hard user presses breaks). Returns current acceleration
 	 * of car.
 	*/
-	public abstract int break (int magnitude);
+	public abstract double break (double magnitude);
 }
 
 public class ElectricCar extends Car {
@@ -51,7 +51,7 @@ interface Drivable {
 	 * vehicle and the number of degrees turned from rest (pointed straight). Counterclockwise
 	 * is positive and clockwise is negative.
 	*/
-	public abstract void steer (int degreesFromRest);
+	public abstract void steer (double degreesFromRest);
 }
 
 interface Hitchable {
