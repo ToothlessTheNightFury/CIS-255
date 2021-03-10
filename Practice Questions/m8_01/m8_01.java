@@ -31,11 +31,11 @@ public abstract class Car extends Vehicle implements Drivable {
 		return --gear;
 	}
 
-	/* Enables the breaks to decelerate the car. How much vehicle decelerates depends on
-	 * vehicle and magnitude given (how hard user presses breaks). Returns current acceleration
+	/* Enables the brake to decelerate the car. How much vehicle decelerates depends on
+	 * vehicle and magnitude given (how hard user presses brakes). Returns current acceleration
 	 * of car.
 	*/
-	public abstract double break (double magnitude);
+	public abstract double brake (double magnitude);
 }
 
 public class ElectricCar extends Car {
