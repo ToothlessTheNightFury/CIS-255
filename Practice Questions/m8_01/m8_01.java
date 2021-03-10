@@ -20,6 +20,7 @@ public abstract class Vehicle {
 
 public abstract class Car extends Vehicle implements Drivable {
 	int gear = 1;
+	double direction;
 	double maneuverability;
 
 	public int gearUp() {
