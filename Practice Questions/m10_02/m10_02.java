@@ -42,17 +42,6 @@ public class m10_02 {
     }
 
     /**
-     * Gets the file path of the specified file name.
-     *
-     * @param fileName the file name
-     * @return the file path of the file
-     */
-    public static String getFilePath (String fileName) {
-        String filePath = System.getProperty("user.dir") + "\\" + fileName;
-        return filePath;
-    }
-
-    /**
      * Reads a file and stores all comma-separated integers in an ArrayList.
      * Returns the number of comma-separated non-integer values in the file.
      *
@@ -79,6 +68,17 @@ public class m10_02 {
         }
 
         return nonInts;
+    }
+
+    /**
+     * Gets the file path of the specified file name.
+     *
+     * @param fileName the file name
+     * @return the file path of the file
+     */
+    public static String getFilePath (String fileName) {
+        String filePath = System.getProperty("user.dir") + "\\" + fileName;
+        return filePath;
     }
 
     /**
