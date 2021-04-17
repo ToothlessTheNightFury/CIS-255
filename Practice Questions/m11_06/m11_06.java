@@ -45,7 +45,7 @@ public class m11_06 extends Application {
     Button startGame = new Button("Start Game");
     Button leaveGame = new Button("Leave Game");
 
-    Label endScore = new Label("01:46:041");
+    Label endScore = new Label("00:00:000");
     Button restartGame = new Button("Restart");
     Button quitGame = new Button ("Quit");
 
@@ -60,7 +60,7 @@ public class m11_06 extends Application {
     public void start(Stage primaryStage) throws Exception {
         window = primaryStage;
         setup();
-        window.setScene(endScene);
+        window.setScene(titleScene);
         window.show();
     }
 
@@ -80,6 +80,7 @@ public class m11_06 extends Application {
     private void setupGame() {
         game = new HiLo();
         time.setText("00:00:00");
+        currentMessage.setText("");
     }
 
     private void setupWindow() {
