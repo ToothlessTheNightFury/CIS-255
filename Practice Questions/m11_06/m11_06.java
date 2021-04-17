@@ -45,8 +45,8 @@ public class m11_06 extends Application {
     Button startGame = new Button("Start Game");
     Button leaveGame = new Button("Leave Game");
 
-    Label endScore = new Label("00:00:00");
-    Button restartGame = new Button("New Game");
+    Label endScore = new Label("01:46:041");
+    Button restartGame = new Button("Restart");
     Button quitGame = new Button ("Quit");
 
     ArrayList<Integer> levelMaxNums;
@@ -60,7 +60,7 @@ public class m11_06 extends Application {
     public void start(Stage primaryStage) throws Exception {
         window = primaryStage;
         setup();
-        window.setScene(titleScene);
+        window.setScene(endScene);
         window.show();
     }
 
