@@ -55,6 +55,8 @@ public class InsuranceData implements Comparable<InsuranceData> {
     @Override
     public String toString() {
         String yearValueStr = yearValue.toString();
+
+        // Replace [] of ArrayList.toString() with {}
         yearValueStr = yearValueStr.replaceAll("\\[", "{");
         yearValueStr = yearValueStr.replaceAll("]", "}");
 

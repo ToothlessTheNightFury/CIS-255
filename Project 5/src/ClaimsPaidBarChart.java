@@ -95,9 +95,12 @@ public class ClaimsPaidBarChart extends Application {
 			return false;
 		}
 
+		// Create monthLabel and monthValue lists to store month labels and their respective values
 		ArrayList<String> monthLabel = new ArrayList<>();
 		ArrayList<Integer> monthValue = new ArrayList<>();
-		getMonthLabelAndValue(dataFile, monthLabel, monthValue);
+
+		// Store all month labels and their respective values from dataFile to monthLabel and monthValue
+		storeMonthLabelAndValue(dataFile, monthLabel, monthValue);
 
 		// get the dataLabel (the year) from the first line of the file
 		setAllDataLabels(dataFile);
@@ -133,11 +136,11 @@ public class ClaimsPaidBarChart extends Application {
 
 		// Check for empty ArrayList. If blank, file not found
 		if (dataFile.isEmpty()) {
-			errorMessage = String.format("File not found: %s\nCannot run program.", fileName);
+			errorMessage = String.format("File blank or not found: %s\nCannot run program.", fileName);
 			return false;
 		}
 
-		// Check for array size equal to or less than 1. If not, no data points and not valid file
+		// Check for array size equal to or less than 1. If not, no data points found and not valid file
 		if (dataFile.size() <= 1) {
 			errorMessage = String.format("Invalid file: %s\nNo data points found.", fileName);
 			return false;
@@ -157,7 +160,7 @@ public class ClaimsPaidBarChart extends Application {
 		return true;
 	}
 
-	private void getMonthLabelAndValue(ArrayList<String> dataFile, ArrayList<String> monthLabel, ArrayList<Integer> monthValue) {
+	private void storeMonthLabelAndValue(ArrayList<String> dataFile, ArrayList<String> monthLabel, ArrayList<Integer> monthValue) {
 		for(String element:dataFile){
 			if(element.contains(",")) {
 				String[] arr = element.split(",");

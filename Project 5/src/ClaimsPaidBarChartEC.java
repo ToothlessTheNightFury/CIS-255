@@ -51,8 +51,8 @@ public class ClaimsPaidBarChartEC extends Application {
         yAxis.setTickUnit(TICK_INTERVAL);
 
         /* PROJECT: This is the series for the chart. You will add data to this series.  */
-        ArrayList<Series> claimsPaidByMonth = new ArrayList<>();
-        boolean success = fillData(claimsPaidByMonth);
+        ArrayList<Series> claimsPaidByMonthList = new ArrayList<>();
+        boolean success = fillData(claimsPaidByMonthList);
         if (!success) {
             showAlert(errorMessage);
             return;
@@ -66,7 +66,7 @@ public class ClaimsPaidBarChartEC extends Application {
         yAxis.setUpperBound(yAxisDisplayMax+TICK_INTERVAL);
 
         // adds the data series to the chart, creates a scene, sets the stage, and shows!
-        barChart.getData().addAll(claimsPaidByMonth);
+        barChart.getData().addAll(claimsPaidByMonthList);
         Scene scene = new Scene(barChart, 800, 600);
         stage.setScene(scene);
         stage.show();
@@ -93,11 +93,14 @@ public class ClaimsPaidBarChartEC extends Application {
             return false;
         }
 
+        // Create InsuranceData list to store all insurance claim data
         ArrayList<InsuranceData> insuranceData = new ArrayList<>();
-        getInsuranceData(dataFile, insuranceData);
+
+        // Store all insurance data from dataFile in insuranceData
+        storeInsuranceData(dataFile, insuranceData);
 
         // Create a series for every year
-        createAllDataSeries(seriesList);
+        createAllDataSeries(seriesList, numOfYears);
 
         // set the dataLabel (the year) from the first line of the file
         setDataLabel(dataFile, seriesList);
@@ -133,7 +136,7 @@ public class ClaimsPaidBarChartEC extends Application {
 
         // Check for empty ArrayList. If blank, file not found
         if (dataFile.isEmpty()) {
-            errorMessage = String.format("File not found: %s\nCannot run program.", fileName);
+            errorMessage = String.format("File blank or not found: %s\nCannot run program.", fileName);
             return false;
         }
 
@@ -144,11 +147,11 @@ public class ClaimsPaidBarChartEC extends Application {
         // Check for at least "Month, YEAR". If not, not enough years and not valid file
         if (years.length < 2) {
             String data = dataFile.get(0);
-            errorMessage = String.format("Invalid file: %s\n'%s' on line 1 not valid data. Must have \"Month\" followed by number of years, seperated by commas.", fileName, data);
+            errorMessage = String.format("Invalid file: %s\n'%s' on line 1 not valid data. Must have \"Month\" followed by number of years, separated by commas.", fileName, data);
             return false;
         }
 
-        // Check for array size equal to or less than 1. If not, no data points and not valid file
+        // Check for array size equal to or less than 1. If not, no data points found and not valid file
         if (dataFile.size() <= 1) {
             errorMessage = String.format("Invalid file: %s\nNo data points found.", fileName);
             return false;
@@ -160,13 +163,13 @@ public class ClaimsPaidBarChartEC extends Application {
             String data = dataFile.get(i);
             String[] array = data.split(",");
 
-            // If data has one or less data points, is not valid data
+            // If data has one or less data points, not valid data
             if (array.length <= 1) {
                 errorMessage = String.format("Invalid data '%s' on line %s:\nNo data points found.", data, lineNum);
                 return false;
             }
 
-            // If data line has more or less years than specified on first line
+            // If data line has a different number of years than specified on first line, not valid data
             int numYearsInLine = array.length - 1;
             if (numYearsInLine != numOfYears) {
                 errorMessage = String.format("Invalid data '%s' on line %s:\nLine 1 specified %d years, but line %d gives %d year(s).",
@@ -174,7 +177,7 @@ public class ClaimsPaidBarChartEC extends Application {
                 return false;
             }
 
-            // If values given after month aren't numeric, is not valid data
+            // If values given after month aren't numeric, not valid data
             if (!isValidDataLine(array)) {
                 errorMessage = String.format("Invalid data '%s' on line %d:\nNon-numeric value found when expecting numeric value.", data, lineNum);
                 return false;
@@ -194,15 +197,14 @@ public class ClaimsPaidBarChartEC extends Application {
         return true;
     }
 
-    private void getInsuranceData(ArrayList<String> dataFile, ArrayList<InsuranceData> insuranceData) {
+    private void storeInsuranceData(ArrayList<String> dataFile, ArrayList<InsuranceData> insuranceData) {
         for (int i = 1; i < dataFile.size(); i++) {
             String dataStr = dataFile.get(i);
-            InsuranceData data = new InsuranceData(dataStr);
-            insuranceData.add(data);
+            insuranceData.add(new InsuranceData(dataStr));
         }
     }
 
-    private void createAllDataSeries(ArrayList<Series> seriesList) {
+    private void createAllDataSeries(ArrayList<Series> seriesList, int numOfYears) {
         for (int i = 0; i < numOfYears; i++) {
             seriesList.add(new Series());
         }
@@ -234,11 +236,11 @@ public class ClaimsPaidBarChartEC extends Application {
     }
 
     private void setYAxisMinMax(ArrayList<InsuranceData> insuranceData) {
-        InsuranceData minData = Collections.min(insuranceData);
-        InsuranceData maxData = Collections.max(insuranceData);
+        InsuranceData minData = Collections.min(insuranceData); // Get InsuranceData object with smallest value
+        InsuranceData maxData = Collections.max(insuranceData); // Get InsuranceData object with largest value
 
-        yAxisMin = minData.getMin();
-        yAxisMax = maxData.getMax();
+        yAxisMin = minData.getMin(); // Get min value from smallest InsuranceData object
+        yAxisMax = maxData.getMax(); // Get max value from largest InsuranceData object
     }
 
     private int getVisuallyAppealingAxisValue(int value) {
@@ -250,7 +252,7 @@ public class ClaimsPaidBarChartEC extends Application {
             return false;
         }
         try {
-            double d = Integer.parseInt(str);
+            Integer d = Integer.parseInt(str);
         } catch (NumberFormatException nfe) {
             return false;
         }
